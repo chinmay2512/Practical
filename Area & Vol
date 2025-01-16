@@ -1,0 +1,80 @@
+1. Write a C++ Program to calculate Area and Volume of room using class and
+object
+
+#include <iostream>
+using namespace std;
+// create a class
+class Room {
+ public:
+ double length;
+ double breadth;
+ double height;
+double calculate_area() {
+ return length * breadth;
+ }
+ double calculate_volume() {
+ return length * breadth * height;
+ }
+};
+int main() {
+ // create object of Room class
+ Room room1;
+ // assign values to data members
+ room1.length = 42.5;
+ room1.breadth = 30.8;
+ room1.height = 19.2;
+ // calculate and display the area and volume of the room
+ cout << "Area of Room = " << room1.calculate_area() << endl;
+ cout << "Volume of Room = " << room1.calculate_volume() << endl;
+ return 0;
+}
+
+2. Write a C++ Program to print your roll number and Name using class
+and object.
+
+#include <iostream>
+using namespace std;
+class Student {
+ public:
+ int id;//data member (also instance variable)
+ string name;//data member(also instance variable)
+};
+int main() {
+ Student s1; //creating an object of Student
+ s1.id = 201;
+ s1.name = "Sonoo Jaiswal";
+ cout<<s1.id<<endl;
+ cout<<s1.name<<endl;
+ return 0;
+}
+
+3. Write a C++ Program to Store and Display Employee Information
+
+#include <iostream>
+using namespace std;
+class Employee
+{
+ public:
+ int id;//data member (also instance variable)
+ string name;//data member(also instance variable)
+ float salary;
+ void insert(int i, string n, float s)
+ {
+ id = i;
+ name = n;
+ salary = s;
+ }
+ void display()
+ {
+ cout<<id<<" "<<name<<" "<<salary<<endl;
+ }
+};
+int main(void) {
+ Employee e1; //creating an object of Employee
+ Employee e2; //creating an object of Employee
+ e1.insert(201, "Sonoo",990000);
+ e2.insert(202, "Nakul", 29000);
+ e1.display();
+ e2.display();
+ return 0;
+}
