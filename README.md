@@ -1,2 +1,0 @@
-# Practical
-oops repo
