@@ -1,0 +1,109 @@
+1. Write a program for Adding two numbers in C++.
+
+#include <iostream>
+using namespace std;
+int main() {
+int a ;
+int b ;
+cin>>a>>b;
+cout<<a+b;
+return 0;
+}
+
+2. C++ program to check if a number is even or odd.
+
+#include <iostream>
+using namespace std;
+int main() {
+int a ;
+cin>>a;
+if(a%2 == 0) // if remainder is zero then even number
+ cout<<”even”;
+else
+ cout<<”odd”;
+return 0;
+
+3. Write a C++ program to find the largest number among three numbers.
+
+#include <iostream>
+using namespace std;
+int main() {
+float a, b, c;
+cin >> a >> b >> c;
+if(a >= b && a >= c)
+ cout << "Largest number: " << a;
+if(b >= a && b >= c)
+ cout << "Largest number: " << b;
+if(c >= a && c >= b)
+ cout << "Largest number: " << c;
+return 0;
+}
+
+4. Write a C++ Program to find the sum of all the natural numbers from 1 to n.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+int n, sum = 0;
+cin >> n;
+for (int i = 1; i <= n; ++i)
+{
+ sum += i;
+}
+// or sum = n*(n+1)/2;
+cout << sum;
+return 0;
+}
+
+5. Write a C++ program to compute the power a given number to a given
+power
+
+3^3=3*3*3=27
+#include <iostream>
+using namespace std;
+int main()
+{
+int power;
+float base, result = 1;
+cin >> base >>power;
+while (power != 0) {
+ result *= base;
+ power--;
+}
+cout << result;
+return 0;
+
+6. Write a C++ program to calculate the average of all the elements present in
+an array.
+
+average= summation〖arr[i]〗/n
+#include <iostream>
+using namespace std;
+int main()
+{
+int n;
+cin>>n;
+int arr[n];
+float sum = 0.0;
+for(int i = 0;i<n;i++)
+ cin>>arr[i];
+for(int i = 0;i<n;i++)
+ sum += arr[i];
+cout<<(float)(sum/(float)n);
+return 0;
+}
+
+7. Write a function to find the length of a string in C++.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+string str;
+cin>>str;
+int count = 0;
+for(int i = 0;str[i];i++) // till the string character is null
+ count++;
+cout<<count;
+}
