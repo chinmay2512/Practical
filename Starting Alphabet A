@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string>
+#include<fstream>
+using namespace std;
+
+int nooflines()
+{
+ifstream fin; // File Handling
+fin.open("STORY.txt");
+char str[80];
+int count=0;
+while(!fin.eof())
+{
+fin.getline(str,80);
+if(str[0]!='A')
+count++;
+
+}
+cout<<"Number of lines not starting with A are :"<<count-1;
+fin.close();
+}
+int main()
+{
+nooflines();
+cout<<"\n";
+return 0;
+}
