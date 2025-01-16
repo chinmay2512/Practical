@@ -1,0 +1,69 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+class Quadratic
+{
+public:
+int a,b,c,s;
+Quadratic()
+{
+a=0;
+b=0;
+c=0;
+}
+
+Quadratic operator+(Quadratic &d)
+{
+Quadratic c4;
+c4.a=a+d.a;
+c4.b=b+d.b;
+c4.c=c+d.c;
+return c4;
+}
+friend void operator<<(ostream &o,Quadratic &e)
+{
+o<<e.a<<"x\u00B2"<<"+"<<e.b<<"x"<<"+"<<e.c;
+}
+friend void operator>>(istream &i,Quadratic &q)
+{
+i>>q.a>>q.b>>q.c;
+}
+void eval(int se)
+{
+s=(a*se*se)+(b*se)+c;
+cout<<"The result of polynomial for a given x: "<<s;
+}
+int sol()
+{
+Cout <<"\n The roots of quadratic equation of polynomial is: ";
+Cout <<"\nRoot1: "<<((-b)+(sqrt(b*b-4*a*c)))/(2*a);
+cout<<"\n Root2: "<<((-b)-(sqrt(b*b-4*a*c)))/(2*a);
+}
+};
+
+int main() {
+Quadratic c1,c2,c3,c6;
+int x;
+cout<<"Initially polynomial is: ";
+cout<<c1;
+cout << "\n Enter first polynomial: " << endl;
+cin>>c1;
+cout << "Enter second polynomial: " << endl;
+cin>>c2;
+c3=c1+c2;
+cout << "First polynomial is: " << endl;
+cout<<c1;
+cout << "\n Second polynomial is: " << endl;
+cout<<c2;
+cout << "\n Addition of two polynomial: " << endl;
+cout<<c3;
+cout << "\n Enter the value of x to evaluate polynomial 1: " << endl;
+cin>>x;
+c1.eval(x);
+c1.sol();
+cout << "\n Enter the value of x to evaluate polynomial 2: " << endl;
+cin>>x;
+c2.eval(x);
+c2.sol();
+return 0;
+}
